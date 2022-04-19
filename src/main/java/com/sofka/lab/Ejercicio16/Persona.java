@@ -59,12 +59,21 @@ public class Persona {
         return false;
     }
 
-//    public void comprobarSexo(){
-//        if (sexo=='H' || sexo='M'){
-//
-//        }
-//    }
+    public void comprobarSexo(char sexo){
+        switch (sexo){
+            case 'H':
+                break;
+            case 'M':
+                break;
+            default:
+                sexo = sexoDefecto;
+                break;
+        }
+    }
 
+//    public String toString(){
+//
+//    }
 
 
 }
