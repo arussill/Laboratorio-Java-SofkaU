@@ -101,7 +101,7 @@ public class Persona {
         }
     }
 
-    public void comprobarSexo(char sexo) {
+    public char comprobarSexo() {
         switch (sexo) {
             case 'H':
                 break;
@@ -111,6 +111,7 @@ public class Persona {
                 sexo = sexoDefecto;
                 break;
         }
+        return sexo;
     }
 
     public String generaDNI() {
@@ -124,8 +125,8 @@ public class Persona {
     public String toString(){
         informacion = "Nombre: " + nombre + "\n" +
                 "Edad: " + edad + "\n" +
-                "DNI: " + dni + "\n" +
-                "Sexo: " + sexo + "\n" +
+                "DNI: " + generaDNI() + "\n" +
+                "Sexo: " + comprobarSexo() + "\n" +
                 "Peso: " + peso + "\n" +
                 "Altura: " + altura + "\n" +
                 "imc: " + imc;
