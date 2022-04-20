@@ -36,7 +36,7 @@ public class Persona {
         this.edad = edad;
         this.sexo = sexo;
         peso = 0;
-        altura = 0.1;
+        altura = 0;
     }
 
     //    Setters
@@ -61,7 +61,7 @@ public class Persona {
     }
 
     //    Metodos
-    public int calcularIMC() {
+    public int calcularIMC(double peso, double altura) {
         imc = peso / Math.pow(altura, 2);
         if (imc < 20) {
             return pesoIdeal;
@@ -70,8 +70,9 @@ public class Persona {
         }
         return sobrePeso;
     }
-    public void comprobacionDePeso() {
-        switch (calcularIMC()){
+
+    public void comprobacionDePeso(double peso, double altura) {
+        switch (calcularIMC(peso, altura)) {
             case 0:
                 System.out.println("Esta por debajo de su peso ideal");
                 break;
@@ -82,12 +83,22 @@ public class Persona {
                 System.out.println("Peso ideal");
                 break;
         }
+    }
 
     public boolean esMayorDeEdad() {
         if (Integer.parseInt(edad) >= 18) {
             return true;
         }
         return false;
+    }
+
+    public void comprobacionMayorDeEdad() {
+        boolean b = esMayorDeEdad();
+        if (b) {
+            System.out.println("Es mayor de edad");
+        } else if (!(b)) {
+            System.out.println("No es mayor de edad");
+        }
     }
 
     public void comprobarSexo(char sexo) {
