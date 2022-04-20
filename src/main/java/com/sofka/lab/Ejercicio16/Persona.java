@@ -70,8 +70,7 @@ public class Persona {
         }
         return sobrePeso;
     }
-
-    public void ComprobacionDePeso() {
+    public void comprobacionDePeso() {
         switch (calcularIMC()){
             case 0:
                 System.out.println("Esta por debajo de su peso ideal");
