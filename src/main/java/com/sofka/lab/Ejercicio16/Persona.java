@@ -2,13 +2,13 @@ package com.sofka.lab.Ejercicio16;
 
 public class Persona {
     //    Atributos
-    private String nombre;
-    private String edad;
+    private String nombre = "";
+    private String edad = " ";
     private String dni;
     private char sexo;
     private final char sexoDefecto = 'H';
-    private double peso;
-    private double altura;
+    private double peso = 0;
+    private double altura = 0;
     private double imc;
     private final int pesoIdeal = -1;
     private final int bajoPeso = 0;
@@ -20,9 +20,21 @@ public class Persona {
 
     //    Constructores
     public Persona() {
-        nombre = "";
-        edad = "";
-        sexo = sexoDefecto;
+
+    }
+
+    public Persona(String nombre, String edad, char sexo, double peso, double altura) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.sexo = sexo;
+        this.peso = 0;
+        this.altura = 0;
+    }
+
+    public Persona(String nombre, String edad, char sexo) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.sexo = sexo;
         peso = 0;
         altura = 0;
     }
@@ -49,22 +61,6 @@ public class Persona {
     }
 
     //    Metodos
-    public void persona(String nombre, String edad, char sexo) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.sexo = sexo;
-        peso = 0;
-        altura = 0;
-    }
-
-    public void persona(String nombre, String edad, char sexo, double peso, double altura) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.sexo = sexo;
-        this.peso = peso;
-        this.altura = altura;
-    }
-
     public int calcularIMC() {
         imc = peso / Math.pow(altura, 2);
         if (imc < 20) {
