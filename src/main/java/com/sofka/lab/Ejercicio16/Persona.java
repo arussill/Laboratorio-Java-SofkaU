@@ -113,7 +113,15 @@ public class Persona {
         }
     }
 
-    public String toString() {
+    public String generaDNI() {
+        calculoDNI = (int) Math.round(Math.random() * 90000000);
+        letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+        residuo = calculoDNI % 23;
+        dni = String.valueOf(calculoDNI) + letras.charAt(residuo);
+        return dni;
+    }
+
+    public String toString(){
         informacion = "Nombre: " + nombre + "\n" +
                 "Edad: " + edad + "\n" +
                 "DNI: " + dni + "\n" +
@@ -123,13 +131,4 @@ public class Persona {
                 "imc: " + imc;
         return informacion;
     }
-
-    public String generaDNI() {
-        calculoDNI = (int) Math.round(Math.random() * 90000000);
-        letras = "TRWAGMYFPDXBNJZSQVHLCKE";
-        residuo = calculoDNI % 23;
-        dni = String.valueOf(calculoDNI) + letras.charAt(residuo);
-        return dni;
-    }
-
 }
