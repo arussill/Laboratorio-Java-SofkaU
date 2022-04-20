@@ -2,13 +2,13 @@ package com.sofka.lab.Ejercicio16;
 
 public class Persona {
     //    Atributos
-    private String nombre = "";
-    private String edad = " ";
+    private String nombre;
+    private String edad;
     private String dni;
     private char sexo;
     private final char sexoDefecto = 'H';
-    private double peso = 0;
-    private double altura = 0;
+    private double peso;
+    private double altura;
     private double imc;
     private final int pesoIdeal = -1;
     private final int bajoPeso = 0;
@@ -27,8 +27,8 @@ public class Persona {
         this.nombre = nombre;
         this.edad = edad;
         this.sexo = sexo;
-        this.peso = 0;
-        this.altura = 0;
+        this.peso = peso;
+        this.altura = altura;
     }
 
     public Persona(String nombre, String edad, char sexo) {
@@ -36,7 +36,7 @@ public class Persona {
         this.edad = edad;
         this.sexo = sexo;
         peso = 0;
-        altura = 0;
+        altura = 0.1;
     }
 
     //    Setters
