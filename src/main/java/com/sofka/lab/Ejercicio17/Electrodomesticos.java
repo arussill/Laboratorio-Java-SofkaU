@@ -12,8 +12,8 @@ public class Electrodomesticos {
     protected final String colorDefecto = "blanco";
     protected final char consumoEnergeticoDefecto = 'F';
     protected final double pesoDefecto = 5;
-    protected char letras [] = ['A', 'B', 'C', 'D', 'E', 'F'];
-    protected String colores [] = ["blanco", "negro", "rojo", "azul", "gris"];
+    protected char [] letras  = {'A', 'B', 'C', 'D', 'E', 'F'};
+    protected String colores [] = {"blanco", "negro", "rojo", "azul", "gris"};
 
 //    Constructores
 
@@ -22,8 +22,8 @@ public class Electrodomesticos {
         this.color = colorDefecto;
         this.consumoEnergetico = consumoEnergeticoDefecto;
         this.peso = pesoDefecto;
-        comprobarConsumoEnergetico();
-        comprobarColor();
+        comprobarConsumoEnergetico(this.consumoEnergetico );
+        comprobarColor(this.color);
     }
 
     public Electrodomesticos (int precioBase, double peso){
@@ -31,8 +31,8 @@ public class Electrodomesticos {
         this.color = colorDefecto;
         this.consumoEnergetico = consumoEnergeticoDefecto;
         this.peso = peso;
-        comprobarConsumoEnergetico();
-        comprobarColor();
+        comprobarConsumoEnergetico(this.consumoEnergetico );
+        comprobarColor(this.color);
     }
 
     public Electrodomesticos (int precioBase, String color, char consumoEnergetico, double peso){
@@ -40,8 +40,8 @@ public class Electrodomesticos {
         this.color = color;
         this.consumoEnergetico = consumoEnergetico;
         this.peso = peso;
-        comprobarConsumoEnergetico();
-        comprobarColor();
+        comprobarConsumoEnergetico(this.consumoEnergetico );
+        comprobarColor(this.color);
     }
 
 //    Getters
