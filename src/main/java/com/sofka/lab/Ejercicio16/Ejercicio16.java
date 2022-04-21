@@ -13,11 +13,11 @@ public class Ejercicio16 {
         System.out.println(persona1);
 
 ////        Persona 2
-//        EntradaDatos datos2 = new EntradaDatos();
-//        Persona persona2 = new Persona(datos2.nombre, datos2.edad, datos2.sexo);
-//        persona2.comprobacionDePeso(datos2.peso, datos2.altura);
-//        persona2.comprobacionMayorDeEdad();
-//        System.out.println(persona2);
+        EntradaDatos datos2 = new EntradaDatos();
+        Persona persona2 = new Persona(datos2.nombre, datos2.edad, datos2.sexo);
+        persona2.comprobacionDePeso(datos2.peso, datos2.altura);
+        persona2.comprobacionMayorDeEdad();
+        System.out.println(persona2);
 
 ////        Persona 3
         Persona persona3 = new Persona();
