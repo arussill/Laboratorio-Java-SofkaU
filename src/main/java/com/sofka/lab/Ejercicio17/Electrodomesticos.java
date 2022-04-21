@@ -14,6 +14,7 @@ public class Electrodomesticos {
     protected final double pesoDefecto = 5;
     protected char [] letras  = {'A', 'B', 'C', 'D', 'E', 'F'};
     protected String colores [] = {"blanco", "negro", "rojo", "azul", "gris"};
+    protected int aumento;
 
 //    Constructores
 
@@ -64,7 +65,7 @@ public class Electrodomesticos {
 
 //    Metodos
 
-    public char comprobarConsumoEnergetico (char letra){
+    private char comprobarConsumoEnergetico (char letra){
         for (char elemento: letras) {
             if (elemento!=letra){
                 consumoEnergetico = consumoEnergeticoDefecto;
@@ -73,7 +74,7 @@ public class Electrodomesticos {
         return consumoEnergetico;
     }
 
-    public String comprobarColor(String color){
+    private String comprobarColor(String color){
         for (String elemento: colores){
             if (elemento.equalsIgnoreCase(color)){
                 this.color = colorDefecto;
@@ -82,8 +83,46 @@ public class Electrodomesticos {
         return this.color;
     }
 
-//    public int precioFinal(char letra){
-//        switch (letra)
-//    }
+    public int precioFinal(){
+        switch (consumoEnergetico){
+            case 'A':
+                aumento = 100;
+                aumentoPorTamaño();
+                break;
+            case 'B':
+                aumento = 80;
+                aumentoPorTamaño();
+                break;
+            case 'C':
+                aumento = 60;
+                aumentoPorTamaño();
+                break;
+            case 'D':
+                aumento = 50;
+                aumentoPorTamaño();
+                break;
+            case 'E':
+                aumento = 30;
+                aumentoPorTamaño();
+                break;
+            case 'F':
+                aumento = 10;
+                aumentoPorTamaño();
+                break;
+        }
+       return (aumento+precioBase);
+    }
+
+    private void aumentoPorTamaño() {
+        if ((0 <= peso) && (peso >= 19)){
+            aumento += 10;
+        }else if ((20 <= peso) && (peso >= 49)){
+            aumento += 50;
+        }else if ((50 <= peso) && (peso >= 79)){
+            aumento += 80;
+        }else if((peso >= 80)){
+            aumento += 100;
+        }
+    }
 
 }
