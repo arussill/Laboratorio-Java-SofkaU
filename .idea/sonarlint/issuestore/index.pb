@@ -21,3 +21,9 @@ f
 6src/main/java/com/sofka/lab/Ejercicio5/Ejercicio5.java,6\d\6ddeb803b18073542da3d0e8c5e145de57d9d04e
 h
 8src/main/java/com/sofka/lab/Ejercicio12/Ejercicio12.java,3\c\3c115de11df3ed49b9b73e5a7395a352208fc566
+i
+9src/main/java/com/sofka/lab/Ejercicio16/EntradaDatos.java,c\7\c7ed6bacb3fcbe8588058b07c38fa11276950b5e
+h
+8src/main/java/com/sofka/lab/Ejercicio16/Ejercicio16.java,9\7\97859e0f3b3c327224243862c00289d9e84fbddd
+d
+4src/main/java/com/sofka/lab/Ejercicio16/Persona.java,8\b\8bdf4d50b50f55990023b567a2f61e6b6bebf472

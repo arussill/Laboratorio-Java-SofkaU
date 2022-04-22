@@ -1,0 +1,25 @@
+
+M
+java:S2589c"7Remove this expression which always evaluates to "true"(ðæô†
+<
+java:S1170	"!Make this final field static too.(êö“öüÿÿÿÿ
+<
+java:S1170"!Make this final field static too.(ŸÊ¡³øÿÿÿÿ
+6
+java:S1170"!Make this final field static too.(ö¾ïG
+<
+java:S1170"!Make this final field static too.(Ò£¿–ûÿÿÿÿ
+t
+java:S1450"YRemove the "calculoDNI" field and declare it as a local variable in the relevant methods.(“ïÐ‰ûÿÿÿÿ
+m
+java:S1450"RRemove the "dni" field and declare it as a local variable in the relevant methods.(ªÍËÅüÿÿÿÿ
+u
+java:S1450"ZRemove the "informacion" field and declare it as a local variable in the relevant methods.(—öÈ½úÿÿÿÿ
+k
+java:S1450"URemove the "letras" field and declare it as a local variable in the relevant methods.(Õ¡ƒ¡
+q
+java:S1450"VRemove the "residuo" field and declare it as a local variable in the relevant methods.(Ó¼°ôúÿÿÿÿ
+W
+java:S1126Y"AReplace this if-then-else statement by a single return statement.(Êï§“
+D
+java:S2140v")Use "java.util.Random.nextInt()" instead.(ë¶¦¹ÿÿÿÿÿ

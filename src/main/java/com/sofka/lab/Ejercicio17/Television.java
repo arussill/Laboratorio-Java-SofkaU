@@ -42,9 +42,13 @@ public class Television extends Electrodomesticos{
     @Override
     public int precioFinal() {
         if ((resolucion >= 40) && (sintonizadorTDT)){
-            aumento = (int) ((super.precioFinal()*0.3)+super.precioFinal())+50;
+            total = (int) (precioBase*0.3)+50;
+        }else if (resolucion >= 40){
+            total = (int)((precioBase*0.3));
+        }else if (sintonizadorTDT){
+            total = 50;
         }
-        return aumento;
+        return (total + super.precioFinal());
     }
 }
 
