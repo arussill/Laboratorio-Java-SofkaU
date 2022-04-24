@@ -1,85 +1,87 @@
 package com.sofka.lab.Ejercicio18;
 
-public class Serie implements Entregable {
 
-    //    Atributos
+import java.time.LocalTime;
+
+public class Videojuego implements Entregable {
+
+//    Atributos
     protected String titulo;
-    protected Integer numeroDeTemporada;
+    protected LocalTime horasEstimadas;
     protected Boolean entregado;
     protected String genero;
-    protected String creador;
+    protected String compania;
     protected String estado;
 
-    //    Constructores
-    public Serie() {
+//    Constructores
+
+    public Videojuego() {
         this.titulo = "";
-        this.numeroDeTemporada = 3;
+        this.horasEstimadas = LocalTime.of(10, 0, 0);
         this.entregado = false;
         this.genero = "";
-        this.creador = "";
+        this.compania = "";
     }
 
-    public Serie(String titulo, String creador) {
+    public Videojuego(String titulo, LocalTime horasEstimadas) {
         this.titulo = titulo;
-        this.numeroDeTemporada = 3;
+        this.horasEstimadas = horasEstimadas;
         this.entregado = false;
         this.genero = "";
-        this.creador = creador;
+        this.compania = "";
     }
 
-    public Serie(String titulo, Integer numeroDeTemporada, String genero, String creador) {
+    public Videojuego(String titulo, LocalTime horasEstimadas, String genero, String compania) {
         this.titulo = titulo;
-        this.numeroDeTemporada = numeroDeTemporada;
+        this.horasEstimadas = horasEstimadas;
         this.entregado = false;
         this.genero = genero;
-        this.creador = creador;
+        this.compania = compania;
     }
 
-    //    Getters
+//    Getters
     public String getTitulo() {
         return titulo;
     }
 
-    public Integer getNumeroDeTemporada() {
-        return numeroDeTemporada;
+    public LocalTime getHorasEstimadas() {
+        return horasEstimadas;
     }
 
     public String getGenero() {
         return genero;
     }
 
-    public String getCreador() {
-        return creador;
+    public String getCompania() {
+        return compania;
     }
 
-//    Setters
 
+//    Setters
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
 
-    public void setNumeroDeTemporada(Integer numeroDeTemporada) {
-        this.numeroDeTemporada = numeroDeTemporada;
+    public void setHorasEstimadas(LocalTime horasEstimadas) {
+        this.horasEstimadas = horasEstimadas;
     }
 
     public void setGenero(String genero) {
         this.genero = genero;
     }
 
-    public void setCreador(String creador) {
-        this.creador = creador;
+    public void setCompania(String compania) {
+        this.compania = compania;
     }
-
-//    Metodos
 
     @Override
     public String toString() {
-        return "Serie{" +
+        return "Videojuego{" +
                 "titulo='" + titulo + '\'' +
-                ", numeroDeTemporada=" + numeroDeTemporada +
+                ", horasEstimadas=" + horasEstimadas +
                 ", entregado=" + entregado +
                 ", genero='" + genero + '\'' +
-                ", creador='" + creador + '\'' +
+                ", compania='" + compania + '\'' +
                 '}';
     }
 
@@ -109,5 +111,3 @@ public class Serie implements Entregable {
 
     }
 }
-
-
