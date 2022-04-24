@@ -98,10 +98,10 @@ public class Videojuego implements Entregable {
     @Override
     public String isEntregado() {
         if (entregado) {
-            estado = "Estado: Entregado";
+            estado = "Estado: Juego entregado";
         }
         if (!(entregado)) {
-            estado = "Estado: No Entregado";
+            estado = "Estado: Juego devuelto";
         }
         return estado;
     }

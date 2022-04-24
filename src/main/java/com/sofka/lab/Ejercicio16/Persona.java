@@ -12,7 +12,6 @@ public class Persona {
     private String nombre;
     private String edad;
     private String dni;
-    private String informacion;
     private String letras;
     private Character sexo;
     private Integer residuo;
@@ -20,7 +19,12 @@ public class Persona {
 
     //    Constructores
     public Persona() {
-
+        this.nombre = "";
+        this.edad = "";
+        this.sexo = 'H';
+        this.peso = 0.0;
+        this.altura = 0.0;
+        generaDNI();
     }
 
     public Persona(String nombre, String edad, char sexo, double peso, double altura) {
@@ -29,6 +33,7 @@ public class Persona {
         this.sexo = sexo;
         this.peso = peso;
         this.altura = altura;
+        generaDNI();
     }
 
     public Persona(String nombre, String edad, char sexo) {
@@ -37,6 +42,7 @@ public class Persona {
         this.sexo = sexo;
         peso = 0.0;
         altura = 0.0;
+        generaDNI();
     }
 
     //    Setters
@@ -103,7 +109,7 @@ public class Persona {
         }
     }
 
-    public char comprobarSexo() {
+    private char comprobarSexo() {
         switch (sexo) {
             case 'H':
                 break;
@@ -116,7 +122,7 @@ public class Persona {
         return sexo;
     }
 
-    public String generaDNI() {
+    private String generaDNI() {
         calculoDNI = (int) Math.round(Math.random() * 90000000);
         letras = "TRWAGMYFPDXBNJZSQVHLCKE";
         residuo = calculoDNI % 23;
@@ -124,14 +130,16 @@ public class Persona {
         return dni;
     }
 
-    public String toString(){
-        informacion = "Nombre: " + nombre + "\n" +
-                "Edad: " + edad + "\n" +
-                "DNI: " + generaDNI() + "\n" +
-                "Sexo: " + comprobarSexo() + "\n" +
-                "Peso: " + peso + "\n" +
-                "Altura: " + altura + "\n" +
-                "imc: " + imc;
-        return informacion;
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "peso=" + peso +
+                ", altura=" + altura +
+                ", imc=" + imc +
+                ", nombre='" + nombre + '\'' +
+                ", edad='" + edad + '\'' +
+                ", dni='" + dni + '\'' +
+                ", sexo=" + comprobarSexo() +
+                '}';
     }
 }
