@@ -4,8 +4,11 @@ import java.util.Scanner;
 
 public class Ejercicio8 {
     public static void main(String[] args) {
+
         Scanner leer = new Scanner(System.in);
         String diaSemana;
+
+        //Menu
         System.out.println("Ingrese un numero para escoger el día de la semana \n" +
                 "1. Lunes \n" +
                 "2. Martes \n" +
@@ -15,6 +18,7 @@ public class Ejercicio8 {
                 "6. Sabado \n" +
                 "7. Domingo");
         diaSemana = leer.nextLine();
+
         switch (diaSemana) {
             case "1":
                 System.out.println("Día Laboral");

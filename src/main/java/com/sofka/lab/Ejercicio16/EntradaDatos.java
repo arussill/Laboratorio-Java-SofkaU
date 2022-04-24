@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class EntradaDatos {
     //    Entrada de datos
     private Scanner leer = new Scanner(System.in);
-    String nombre;
-    String edad;
-    char sexo;
-    double peso;
-    double altura;
+    protected String nombre;
+    protected String edad;
+    protected Character sexo;
+    protected Double peso;
+    protected Double altura;
 
     public EntradaDatos() {
         System.out.println("Ingrese nombre: ");

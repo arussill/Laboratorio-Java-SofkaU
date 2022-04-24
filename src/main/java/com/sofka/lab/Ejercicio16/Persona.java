@@ -2,21 +2,21 @@ package com.sofka.lab.Ejercicio16;
 
 public class Persona {
     //    Atributos
+    private final Character sexoDefecto = 'H';
+    private final Integer pesoIdeal = -1;
+    private final Integer bajoPeso = 0;
+    private final Integer sobrePeso = 1;
+    private Double peso;
+    private Double altura;
+    private Double imc;
     private String nombre;
     private String edad;
     private String dni;
-    private char sexo;
-    private final char sexoDefecto = 'H';
-    private double peso;
-    private double altura;
-    private double imc;
-    private final int pesoIdeal = -1;
-    private final int bajoPeso = 0;
-    private final int sobrePeso = 1;
     private String informacion;
     private String letras;
-    private int residuo;
-    private int calculoDNI;
+    private Character sexo;
+    private Integer residuo;
+    private Integer calculoDNI;
 
     //    Constructores
     public Persona() {
@@ -35,8 +35,8 @@ public class Persona {
         this.nombre = nombre;
         this.edad = edad;
         this.sexo = sexo;
-        peso = 0;
-        altura = 0;
+        peso = 0.0;
+        altura = 0.0;
     }
 
     //    Setters
@@ -65,7 +65,8 @@ public class Persona {
         imc = peso / Math.pow(altura, 2);
         if (imc < 20) {
             return pesoIdeal;
-        } else if (20 <= imc && imc <= 25) {
+        }
+        if (20 <= imc && imc <= 25) {
             return bajoPeso;
         }
         return sobrePeso;
@@ -96,7 +97,8 @@ public class Persona {
         boolean b = esMayorDeEdad();
         if (b) {
             System.out.println("Es mayor de edad");
-        } else if (!(b)) {
+        }
+        if (!(b)) {
             System.out.println("No es mayor de edad");
         }
     }

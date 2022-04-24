@@ -4,8 +4,9 @@ import java.util.Scanner;
 
 public class Ejercicio15 {
     public static void main(String[] args) {
+
         Scanner leer = new Scanner(System.in);
-        int respuesta;
+        Integer respuesta;
         String menu = "****** GESTION CINEMATOGRAFICA ********\n" +
                 "1-NUEVO ACTOR\n" +
                 "2-BUSCAR ACTOR\n" +
@@ -19,10 +20,10 @@ public class Ejercicio15 {
         do {
             System.out.println(menu + "Ingrese el numero de alguna de las opciones anteriores: ");
             respuesta = leer.nextInt();
-            if(respuesta < 1 || respuesta > 8){
+            if (respuesta < 1 || respuesta > 8) {
                 System.out.println("Opcion Incorrecta");
             }
-        }while (respuesta != 8);
+        } while (respuesta != 8);
         System.out.println("salio del menu");
     }
 

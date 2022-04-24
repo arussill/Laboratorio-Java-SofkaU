@@ -4,19 +4,19 @@ public class Electrodomesticos {
 
 //    Atributos
 
-    protected int precioBase;
-    protected String color;
-    protected char consumoEnergetico;
-    protected double peso;
-    protected final int precioBaseDefecto = 100;
+    protected final Character consumoEnergeticoDefecto = 'F';
+    protected final Double pesoDefecto = 5.0;
+    protected final Integer precioBaseDefecto = 100;
     protected final String colorDefecto = "blanco";
-    protected final char consumoEnergeticoDefecto = 'F';
-    protected final double pesoDefecto = 5;
-    protected char[] letras = {'A', 'B', 'C', 'D', 'E', 'F'};
+    protected Character[] letras = {'A', 'B', 'C', 'D', 'E', 'F'};
     protected String colores[] = {"blanco", "negro", "rojo", "azul", "gris"};
-    protected int aumento = 0;
-    protected int total = 0;
-    protected int aumentoTamano = 0;
+    protected String color;
+    protected Integer total = 0;
+    protected Integer aumento = 0;
+    protected Integer aumentoTamano = 0;
+    protected Character consumoEnergetico;
+    protected Double peso;
+    protected Integer precioBase;
 
 //    Constructores
 
@@ -112,11 +112,14 @@ public class Electrodomesticos {
     public int aumentoPorTamano(double peso) {
         if ((peso > 0) && (peso <= 19)) {
             aumentoTamano = 10;
-        } else if ((peso >= 20) && (peso <= 49)) {
+        }
+        if ((peso >= 20) && (peso <= 49)) {
             aumentoTamano = 50;
-        } else if ((peso >= 50) && (peso <= 79)) {
+        }
+        if ((peso >= 50) && (peso <= 79)) {
             aumentoTamano = 80;
-        } else if ((peso >= 80)) {
+        }
+        if ((peso >= 80)) {
             aumentoTamano = 100;
         }
         return aumentoTamano;

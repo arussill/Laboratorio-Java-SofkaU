@@ -1,12 +1,11 @@
 package com.sofka.lab.Ejercicio17;
 
-//SubClase de Electrodomesticos
 public class Lavadora extends Electrodomesticos {
 
 //    Atributos
 
-    private double carga;
-    private final double cargaDefecto = 5;
+    private Double carga;
+    private final Double cargaDefecto = 5.0;
 
 //    Constructores
 
@@ -38,7 +37,7 @@ public class Lavadora extends Electrodomesticos {
     @Override
     public int precioFinal() {
         if (carga >= 30) {
-            total = 50 ;
+            total = 50;
         }
         return (total + super.precioFinal());
 

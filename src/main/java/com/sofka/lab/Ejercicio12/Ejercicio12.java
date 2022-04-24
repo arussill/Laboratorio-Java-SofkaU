@@ -4,12 +4,13 @@ import java.util.Scanner;
 
 public class Ejercicio12 {
     public static void main(String[] args) {
+
         Scanner leer = new Scanner(System.in);
         System.out.println("Ingrese primera palabra: ");
         String palabra1 = leer.nextLine();
         System.out.println("Ingrese segunda palabra: ");
         String palabra2 = leer.nextLine();
-        int longitud = palabra1.length();
+        Integer longitud = palabra1.length();
 
         condicion(palabra1, palabra2, longitud);
 

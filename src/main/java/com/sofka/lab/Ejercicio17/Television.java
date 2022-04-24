@@ -1,29 +1,29 @@
 package com.sofka.lab.Ejercicio17;
 
-public class Television extends Electrodomesticos{
+public class Television extends Electrodomesticos {
 
     //    Atributos
 
-    private int resolucion;
-    private boolean sintonizadorTDT;
-    private final int resolucioDefecto = 20;
-    private final boolean sintonizadorTDTDefecto = false;
+    private Boolean sintonizadorTDT;
+    private final Boolean sintonizadorTDTDefecto = false;
+    private final Integer resolucioDefecto = 20;
+    private Integer resolucion;
 
 //    Constructores
 
-    public Television (){
+    public Television() {
         super();
         this.resolucion = resolucioDefecto;
         this.sintonizadorTDT = sintonizadorTDTDefecto;
     }
 
-    public Television (int precioBase, double peso){
+    public Television(int precioBase, double peso) {
         super(precioBase, peso);
         this.resolucion = resolucioDefecto;
         this.sintonizadorTDT = sintonizadorTDTDefecto;
     }
 
-    public Television(int resolucion, boolean sintonizadorTDT){
+    public Television(int resolucion, boolean sintonizadorTDT) {
         super();
         this.resolucion = resolucion;
         this.sintonizadorTDT = sintonizadorTDT;
@@ -41,11 +41,13 @@ public class Television extends Electrodomesticos{
 
     @Override
     public int precioFinal() {
-        if ((resolucion >= 40) && (sintonizadorTDT)){
-            total = (int) (precioBase*0.3)+50;
-        }else if (resolucion >= 40){
-            total = (int)((precioBase*0.3));
-        }else if (sintonizadorTDT){
+        if ((resolucion >= 40) && (sintonizadorTDT)) {
+            total = (int) (precioBase * 0.3) + 50;
+        }
+        if (resolucion >= 40) {
+            total = (int) ((precioBase * 0.3));
+        }
+        if (sintonizadorTDT) {
             total = 50;
         }
         return (total + super.precioFinal());
