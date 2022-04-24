@@ -1,1 +1,1 @@
-# Laboratorio-Java-SofkaU
+# Practica-Java-SofkaU
