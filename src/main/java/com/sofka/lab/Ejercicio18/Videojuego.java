@@ -1,29 +1,28 @@
 package com.sofka.lab.Ejercicio18;
 
 
-import java.time.LocalTime;
-
 public class Videojuego implements Entregable {
 
 //    Atributos
     protected String titulo;
-    protected LocalTime horasEstimadas;
+    protected Integer horasEstimadas;
     protected Boolean entregado;
     protected String genero;
     protected String compania;
     protected String estado;
+    protected static Integer mayorHorasEstimadas = 0;
 
 //    Constructores
 
     public Videojuego() {
         this.titulo = "";
-        this.horasEstimadas = LocalTime.of(10, 0, 0);
+        this.horasEstimadas = 10;
         this.entregado = false;
         this.genero = "";
         this.compania = "";
     }
 
-    public Videojuego(String titulo, LocalTime horasEstimadas) {
+    public Videojuego(String titulo, Integer horasEstimadas) {
         this.titulo = titulo;
         this.horasEstimadas = horasEstimadas;
         this.entregado = false;
@@ -31,7 +30,7 @@ public class Videojuego implements Entregable {
         this.compania = "";
     }
 
-    public Videojuego(String titulo, LocalTime horasEstimadas, String genero, String compania) {
+    public Videojuego(String titulo, Integer horasEstimadas, String genero, String compania) {
         this.titulo = titulo;
         this.horasEstimadas = horasEstimadas;
         this.entregado = false;
@@ -44,7 +43,7 @@ public class Videojuego implements Entregable {
         return titulo;
     }
 
-    public LocalTime getHorasEstimadas() {
+    public Integer getHorasEstimadas() {
         return horasEstimadas;
     }
 
@@ -62,7 +61,7 @@ public class Videojuego implements Entregable {
         this.titulo = titulo;
     }
 
-    public void setHorasEstimadas(LocalTime horasEstimadas) {
+    public void setHorasEstimadas(Integer horasEstimadas) {
         this.horasEstimadas = horasEstimadas;
     }
 
@@ -77,11 +76,11 @@ public class Videojuego implements Entregable {
     @Override
     public String toString() {
         return "Videojuego{" +
-                "titulo='" + titulo + '\'' +
+                "titulo='" + titulo + '\n' +
                 ", horasEstimadas=" + horasEstimadas +
                 ", entregado=" + entregado +
-                ", genero='" + genero + '\'' +
-                ", compania='" + compania + '\'' +
+                ", genero='" + genero + '\n' +
+                ", compania='" + compania + '\n' +
                 '}';
     }
 
@@ -107,7 +106,12 @@ public class Videojuego implements Entregable {
     }
 
     @Override
-    public void compareTo(Object a) {
+    public Integer compareTo(Object a) {
 
+        if (mayorHorasEstimadas < (Integer) a){
+            mayorHorasEstimadas = (Integer) a;
+        }
+
+        return mayorHorasEstimadas;
     }
 }

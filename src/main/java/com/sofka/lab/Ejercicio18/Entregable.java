@@ -8,6 +8,6 @@ public interface Entregable {
 
     public String isEntregado();
 
-    public void compareTo(Object a);
+    public Integer compareTo(Object a);
 
 }

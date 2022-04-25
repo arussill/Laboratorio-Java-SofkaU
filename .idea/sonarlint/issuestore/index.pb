@@ -37,5 +37,9 @@ f
 6src/main/java/com/sofka/lab/Ejercicio1/Ejercicio1.java,f\a\fa97e7753572b925a59cc1a8928fd3f457cbfab8
 g
 7src/main/java/com/sofka/lab/Ejercicio17/Television.java,1\d\1d005ddeee0ace453ef0978b3c1794d94930f418
+g
+7src/main/java/com/sofka/lab/Ejercicio18/Entregable.java,b\3\b39aab8897fea460383a8ad16a9c057ff1d1c072
+d
+4src/main/java/com/sofka/lab/Ejercicio16/Persona.java,8\b\8bdf4d50b50f55990023b567a2f61e6b6bebf472
 n
 >src/main/java/com/sofka/lab/Ejercicio17/Electrodomesticos.java,3\9\3987dfeeccc39a2ccfdc4a4694417f78861f8462

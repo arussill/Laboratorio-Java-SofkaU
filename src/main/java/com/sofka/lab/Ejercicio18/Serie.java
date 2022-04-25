@@ -9,6 +9,7 @@ public class Serie implements Entregable {
     protected String genero;
     protected String creador;
     protected String estado;
+    protected static Integer mayorTemporadas = 0;
 
     //    Constructores
     public Serie() {
@@ -75,11 +76,11 @@ public class Serie implements Entregable {
     @Override
     public String toString() {
         return "Serie{" +
-                "titulo='" + titulo + '\'' +
+                "titulo='" + titulo + '\n' +
                 ", numeroDeTemporada=" + numeroDeTemporada +
                 ", entregado=" + entregado +
-                ", genero='" + genero + '\'' +
-                ", creador='" + creador + '\'' +
+                ", genero='" + genero + '\n' +
+                ", creador='" + creador + '\n' +
                 '}';
     }
 
@@ -105,8 +106,11 @@ public class Serie implements Entregable {
     }
 
     @Override
-    public void compareTo(Object a) {
-
+    public Integer compareTo(Object a) {
+        if (mayorTemporadas <= (Integer) a){
+            mayorTemporadas = (Integer) a;
+        }
+        return mayorTemporadas;
     }
 }
 
